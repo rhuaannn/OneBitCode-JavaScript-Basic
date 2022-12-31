@@ -8,11 +8,14 @@ while (name == "") {
  
 
 let city = prompt("Você já visitou alguma cidade?\n 1: Sim \n 2: Nao");
-alert("Opção inválida.")
+if (city ==2) {
+    alert("Precisa visitar alguma cidade")
+}
+
 city = prompt("Você já visitou alguma cidade?\n 1: Sim \n 2: Nao");
 
 while(city ==2){
-    alert("Precisa visitar alguma cidade")
+    //alert("Precisa visitar alguma cidade")
     city =  prompt("Você já visitou alguma cidade?\n 1: Sim \n 2: Nao");
 }
 
