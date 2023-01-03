@@ -1,34 +1,29 @@
 let name = prompt("Digite seu nome");
 
-while (name == "") {
+
+if (name == "") {
     alert("Nome é necessário")
     name = prompt("Digite seu nome");
    
 }
- 
+ let city = prompt("Você visitou alguma cidade? \n1-Sim \n2-Não")
+    while (city==2) {
+        alert("Você precisa visitar uma cidade.")
+        city = prompt("Você visitou alguma cidade? \n1-Sim \n2-Não")
+}
+let visit =0
+let cidade = ''
 
-let city = prompt("Você já visitou alguma cidade?\n 1: Sim \n 2: Nao");
-if (city ==2) {
-    alert("Precisa visitar alguma cidade")
+    while(city==1){
+       let cidades = prompt("Qual foi nome da cidade?")
+       cidade += "" + cidades + "\n"
+        city = prompt("Você visitou alguma cidade? \n1-Sim \n2-Não")
+        visit++
+        
 }
 
-city = prompt("Você já visitou alguma cidade?\n 1: Sim \n 2: Nao");
 
-while(city ==2){
-    //alert("Precisa visitar alguma cidade")
-    city =  prompt("Você já visitou alguma cidade?\n 1: Sim \n 2: Nao");
-}
-
-let visit =""
-
-
-    
-while (city == 1) {
-   
-    city =  prompt("Você já visitou alguma cidade?\n 1: Sim \n 2: Nao");
-    visit++  
-}
-alert(`Seu nome é ${ name } e visitou um total de ${ visit } cidades`)
+alert(`Seu nome é ${ name } e visitou um total de ${ visit } cidades cujo nomes são: -\n ${ cidade }`)
 alert("Software encerrado!")
      
         
