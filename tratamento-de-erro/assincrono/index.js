@@ -1,13 +1,16 @@
-const p = new Promise((resolve, reject) => {
-  console.log('A promise está sendo executada.')
-  setTimeout(() => {
-      console.log('Resolvendo a promise...')
-      resolve('Resultado')
-  }, 3 * 1000)
-})
+function execute() {
+  return new Promise((resolve, reject) => {
+      console.log('A promise está sendo executada.')
+      setTimeout(() => {
+          console.log('Resolvendo a promise...')
+          resolve(2+2*5*4/4)
+      }, 3 * 1000)
+  })
+}
 
-console.log(p)
+const p = execute()
 
-setTimeout(() => {
-  console.log(p)
-}, 5 * 1000)
+ p.then((result) =>{
+  console.log(`O resultado é ${result}` )
+ })
+
